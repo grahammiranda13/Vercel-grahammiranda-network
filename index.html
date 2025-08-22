@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FounderStack - Technology Strategy & Tools for Startup Founders</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Essential technology guides, SaaS tools, and infrastructure strategies for startup founders and tech entrepreneurs. Build, scale, and optimize your startup's tech stack with expert insights.">
+    <meta name="keywords" content="startup technology stack, SaaS founder tools, tech entrepreneur guide, early stage startup technology, founder tech resources, startup infrastructure, tech startup strategy, SaaS growth tools">
+    <meta name="author" content="FounderStack">
+    <meta name="robots" content="index, follow">
+
+    <!-- Verification Tags -->
+    <meta name="google-site-verification" content="AJEup7h_AMLr5foOKgGOlZjTUVyd4KTqBcanY30cwS4" />
+    <meta name="msvalidate.01" content="2CE588F0C2D4FC0B69A67814A3917FF3" />
+
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" content="FounderStack - Technology Strategy for Startup Founders">
+    <meta property="og:description" content="Expert technology guidance, SaaS tools reviews, and infrastructure strategies tailored specifically for startup founders and tech entrepreneurs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-project.vercel.app">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FounderStack",
+        "description": "Technology strategy and tool recommendations for startup founders, tech entrepreneurs, and SaaS builders",
+        "url": "https://your-project.vercel.app",
+        "foundingDate": "2025",
+        "industry": "Technology Consulting",
+        "targetAudience": {
+            "@type": "Audience",
+            "audienceType": "startup founders, tech entrepreneurs, SaaS builders"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Founder Technology Resources",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Technology Stack Recommendations",
+                        "description": "Curated technology recommendations for early-stage startups"
+                    }
+                },
+                {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "SaaS Tool Strategy",
+                        "description": "Strategic guidance for SaaS founders on technology decisions"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__brand">
+                <div class="logo">
+                    <span class="logo__icon">🚀</span>
+                    <span class="logo__text">FounderStack</span>
+                </div>
+                <p class="header__tagline">Technology that scales with your vision</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#stack" class="nav__link">Tech Stack</a></li>
+                    <li class="nav__item"><a href="#tools" class="nav__link">SaaS Tools</a></li>
+                    <li class="nav__item"><a href="#infrastructure" class="nav__link">Infrastructure</a></li>
+                    <li class="nav__item"><a href="#scaling" class="nav__link">Scaling</a></li>
+                </ul>
+                <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span class="badge__icon">⚡</span>
+                    <span class="badge__text">Founder-to-Founder Insights</span>
+                </div>
+                <h1 class="hero__title">Build Your Startup's Technology Foundation the Right Way</h1>
+                <p class="hero__description">
+                    Stop second-guessing your tech decisions. Get battle-tested strategies, tool recommendations, and infrastructure guidance from founders who've scaled from idea to IPO. Make smart technology choices that grow with your startup.
+                </p>
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__number">500+</span>
+                        <span class="stat__label">Startups Guided</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">$2B+</span>
+                        <span class="stat__label">Raised by Alumni</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">95%</span>
+                        <span class="stat__label">Technical Debt Avoided</span>
+                    </div>
+                </div>
+                <div class="hero__cta">
+                    <a href="#stack" class="btn btn--primary">
+                        <span>Get Your Tech Stack Guide</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#tools" class="btn btn--outline">Browse SaaS Tools</a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="terminal">
+                    <div class="terminal__header">
+                        <div class="terminal__dots">
+                            <span class="dot dot--red"></span>
+                            <span class="dot dot--yellow"></span>
+                            <span class="dot dot--green"></span>
+                        </div>
+                        <span class="terminal__title">founder@startup:~</span>
+                    </div>
+                    <div class="terminal__body">
+                        <div class="terminal__line">
+                            <span class="prompt">$</span>
+                            <span class="command">npm start</span>
+                        </div>
+                        <div class="terminal__line">
+                            <span class="output">🚀 Starting your unicorn...</span>
+                        </div>
+                        <div class="terminal__line">
+                            <span class="output">✅ MVP deployed successfully</span>
+                        </div>
+                        <div class="terminal__line">
+                            <span class="output">💰 Funding round: Series A</span>
+                        </div>
+                        <div class="terminal__line">
+                            <span class="output">📈 Scaling infrastructure...</span>
+                        </div>
+                        <div class="terminal__line">
+                            <span class="prompt">$</span>
+                            <span class="cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="stack" class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Startup Technology Stack Recommendations</h2>
+                <p class="section__subtitle">
+                    Battle-tested technology combinations that have powered successful startups from pre-seed to IPO. Choose your stack based on your stage, team size, and growth trajectory.
+                </p>
+            </div>
+
+            <div class="stack-grid">
+                <div class="stack-card stack-card--featured">
+                    <div class="stack-card__header">
+                        <div class="stack-card__badge">Most Popular</div>
+                        <h3 class="stack-card__title">The MERN Foundation</h3>
+                        <p class="stack-card__subtitle">Perfect for SaaS MVPs & rapid prototyping</p>
+                    </div>
+                    <div class="stack-card__content">
+                        <p class="stack-card__description">
+                            MongoDB, Express, React, Node.js - the JavaScript-everywhere stack that lets your team move fast and scale smart. Used by 70% of successful SaaS startups we've tracked. Get professional implementation guidance from <a href="https://tech.grahammiranda.com" class="inline-link" target="_blank" rel="noopener">experienced technical architects</a> who've deployed MERN at scale.
+                        </p>
+                        <div class="tech-icons">
+                            <div class="tech-icon">
+                                <span class="tech-icon__symbol">M</span>
+                                <span class="tech-icon__name">MongoDB</span>
+                            </div>
+                            <div class="tech-icon">
+                                <span class="tech-icon__symbol">E</span>
+                                <span class="tech-icon__name">Express</span>
+                            </div>
+                            <div class="tech-icon">
+                                <span class="tech-icon__symbol">R</span>
+                                <span class="tech-icon__name">React</span>
+                            </div>
+                            <div class="tech-icon">
+                                <span class="tech-icon__symbol">N</span>
+                                <span class="tech-icon__name">Node.js</span>
+                            </div>
+                        </div>
+                        <div class="stack-card__metrics">
+                            <div class="metric">
+                                <span class="metric__value">4-6 weeks</span>
+                                <span class="metric__label">MVP Timeline</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__value">$15-25K</span>
+                                <span class="metric__label">Development Cost</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__value">10M+ users</span>
+                                <span class="metric__label">Scale Potential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card__header">
+                        <h3 class="stack-card__title">Next.js + Supabase</h3>
+                        <p class="stack-card__subtitle">Modern full-stack for product-focused teams</p>
+                    </div>
+                    <div class="stack-card__content">
+                        <p class="stack-card__description">
+                            The new generation stack that combines React's power with backend-as-a-service simplicity. Perfect for founders who want to focus on product-market fit, not infrastructure complexity.
+                        </p>
+                        <div class="stack-card__features">
+                            <div class="feature">✨ Serverless by default</div>
+                            <div class="feature">🔐 Built-in authentication</div>
+                            <div class="feature">📊 Real-time capabilities</div>
+                            <div class="feature">🚀 Deploy in minutes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card__header">
+                        <h3 class="stack-card__title">Django + PostgreSQL</h3>
+                        <p class="stack-card__subtitle">Enterprise-ready Python foundation</p>
+                    </div>
+                    <div class="stack-card__content">
+                        <p class="stack-card__description">
+                            When you need enterprise-grade security and data integrity from day one. The choice for fintech, healthtech, and B2B SaaS that handles sensitive data.
+                        </p>
+                        <div class="stack-card__features">
+                            <div class="feature">🔒 Security-first design</div>
+                            <div class="feature">📈 Excellent for data-heavy apps</div>
+                            <div class="feature">🏗️ Built-in admin interface</div>
+                            <div class="feature">🔧 Highly customizable</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card__header">
+                        <h3 class="stack-card__title">Ruby on Rails</h3>
+                        <p class="stack-card__subtitle">Convention over configuration for rapid iteration</p>
+                    </div>
+                    <div class="stack-card__content">
+                        <p class="stack-card__description">
+                            The startup darling that prioritizes developer happiness and shipping speed. Perfect for marketplace MVPs, content platforms, and any startup that needs to iterate quickly.
+                        </p>
+                        <div class="stack-card__features">
+                            <div class="feature">⚡ Lightning-fast development</div>
+                            <div class="feature">🔄 Built for rapid iteration</div>
+                            <div class="feature">💎 Elegant, readable code</div>
+                            <div class="feature">📦 Rich ecosystem</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card__header">
+                        <h3 class="stack-card__title">Flutter + Firebase</h3>
+                        <p class="stack-card__subtitle">Cross-platform mobile-first approach</p>
+                    </div>
+                    <div class="stack-card__content">
+                        <p class="stack-card__description">
+                            Build once, deploy everywhere. Perfect for consumer mobile apps, progressive web apps, and startups targeting mobile-first markets with limited development resources.
+                        </p>
+                        <div class="stack-card__features">
+                            <div class="feature">📱 Native mobile performance</div>
+                            <div class="feature">🌐 Single codebase</div>
+                            <div class="feature">☁️ Google Cloud integration</div>
+                            <div class="feature">🔥 Real-time features</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-card">
+                    <div class="stack-card__header">
+                        <h3 class="stack-card__title">JAMstack + Serverless</h3>
+                        <p class="stack-card__subtitle">Modern edge-first architecture</p>
+                    </div>
+                    <div class="stack-card__content">
+                        <p class="stack-card__description">
+                            JavaScript, APIs, Markup - the future of web development. Perfect for content-heavy products, marketing sites, and startups prioritizing performance and global reach.
+                        </p>
+                        <div class="stack-card__features">
+                            <div class="feature">🌍 Global edge distribution</div>
+                            <div class="feature">💰 Pay-per-use pricing</div>
+                            <div class="feature">🔧 Minimal maintenance</div>
+                            <div class="feature">⚡ Blazing fast performance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stack-cta">
+                <h3 class="cta__title">Need Help Choosing Your Stack?</h3>
+                <p class="cta__description">
+                    Get personalized recommendations based on your startup's specific needs, team composition, and growth plans. Our technology assessment takes 10 minutes and provides a custom roadmap.
+                </p>
+                <div class="cta__buttons">
+                    <a href="https://www.grahammiranda.com" class="btn btn--primary" target="_blank" rel="noopener">Get Professional Assessment</a>
+                    <a href="#tools" class="btn btn--outline">Explore SaaS Tools</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SaaS Tools Section -->
+    <section id="tools" class="section section--dark">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Essential SaaS Tools for Every Startup Stage</h2>
+                <p class="section__subtitle">
+                    Curated tools and services that successful founders swear by. From pre-revenue MVP to unicorn status, here's what you need at each stage to stay lean and scale smart.
+                </p>
+            </div>
+
+            <div class="tools-timeline">
+                <div class="timeline-stage">
+                    <div class="stage__marker">
+                        <span class="stage__icon">💡</span>
+                        <span class="stage__label">Idea Stage</span>
+                    </div>
+                    <div class="stage__content">
+                        <h4 class="stage__title">Validate & Plan</h4>
+                        <div class="tool-grid">
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">Figma</span>
+                                    <span class="tool__category">Design</span>
+                                </div>
+                                <p class="tool__description">Design and prototype your product before writing a single line of code.</p>
+                                <div class="tool__pricing">Free tier available</div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">Notion</span>
+                                    <span class="tool__category">Documentation</span>
+                                </div>
+                                <p class="tool__description">All-in-one workspace for planning, documentation, and team collaboration.</p>
+                                <div class="tool__pricing">$0-8/user/month</div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">Typeform</span>
+                                    <span class="tool__category">Research</span>
+                                </div>
+                                <p class="tool__description">Beautiful surveys and forms for market research and user validation.</p>
+                                <div class="tool__pricing">$0-25/month</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-stage">
+                    <div class="stage__marker">
+                        <span class="stage__icon">🛠️</span>
+                        <span class="stage__label">Build Stage</span>
+                    </div>
+                    <div class="stage__content">
+                        <h4 class="stage__title">MVP Development</h4>
+                        <div class="tool-grid">
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">GitHub</span>
+                                    <span class="tool__category">Code Management</span>
+                                </div>
+                                <p class="tool__description">Version control, collaboration, and CI/CD for your development team.</p>
+                                <div class="tool__pricing">Free for public repos</div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">Vercel</span>
+                                    <span class="tool__category">Deployment</span>
+                                </div>
+                                <p class="tool__description">Lightning-fast deployment and hosting for modern web apps.</p>
+                                <div class="tool__pricing">Free tier + usage</div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">Linear</span>
+                                    <span class="tool__category">Project Management</span>
+                                </div>
+                                <p class="tool__description">Purpose-built issue tracking and project management for software teams.</p>
+                                <div class="tool__pricing">$8/user/month</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-stage">
+                    <div class="stage__marker">
+                        <span class="stage__icon">🚀</span>
+                        <span class="stage__label">Launch Stage</span>
+                    </div>
+                    <div class="stage__content">
+                        <h4 class="stage__title">Go-to-Market</h4>
+                        <div class="tool-grid">
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">PostHog</span>
+                                    <span class="tool__category">Analytics</span>
+                                </div>
+                                <p class="tool__description">Product analytics, feature flags, and A/B testing in one platform.</p>
+                                <div class="tool__pricing">Free up to 1M events</div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">Intercom</span>
+                                    <span class="tool__category">Customer Support</span>
+                                </div>
+                                <p class="tool__description">Customer messaging, support, and engagement platform.</p>
+                                <div class="tool__pricing">$39/seat/month</div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">Stripe</span>
+                                    <span class="tool__category">Payments</span>
+                                </div>
+                                <p class="tool__description">Accept payments, manage subscriptions, and handle complex billing.</p>
+                                <div class="tool__pricing">2.9% + $0.30/transaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-stage">
+                    <div class="stage__marker">
+                        <span class="stage__icon">📈</span>
+                        <span class="stage__label">Growth Stage</span>
+                    </div>
+                    <div class="stage__content">
+                        <h4 class="stage__title">Scale Operations</h4>
+                        <div class="tool-grid">
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">Slack</span>
+                                    <span class="tool__category">Communication</span>
+                                </div>
+                                <p class="tool__description">Team communication and collaboration as you grow beyond 10 people.</p>
+                                <div class="tool__pricing">$7.25/user/month</div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">HubSpot</span>
+                                    <span class="tool__category">CRM</span>
+                                </div>
+                                <p class="tool__description">Sales, marketing, and customer relationship management platform.</p>
+                                <div class="tool__pricing">Free tier available</div>
+                            </div>
+                            <div class="tool-item">
+                                <div class="tool__header">
+                                    <span class="tool__name">AWS</span>
+                                    <span class="tool__category">Infrastructure</span>
+                                </div>
+                                <p class="tool__description">Scalable cloud infrastructure for serious growth and enterprise needs.</p>
+                                <div class="tool__pricing">Pay-per-use</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tools-expert">
+                <h3 class="expert__title">Need Infrastructure That Scales?</h3>
+                <p class="expert__description">
+                    As your startup grows, your technology needs become more complex. Get guidance from professionals who've built infrastructure for unicorns and can help you avoid costly mistakes.
+                </p>
+                <div class="expert__links">
+                    <a href="https://nexplus.grahammiranda.network" class="expert__link" target="_blank" rel="noopener">
+                        <span class="expert__icon">🏗️</span>
+                        <span class="expert__text">Enterprise Infrastructure Solutions</span>
+                    </a>
+                    <a href="https://www.grahammiranda.network" class="expert__link" target="_blank" rel="noopener">
+                        <span class="expert__icon">🌐</span>
+                        <span class="expert__text">Network Architecture & Optimization</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section id="infrastructure" class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Startup Infrastructure Strategies</h2>
+                <p class="section__subtitle">
+                    Build infrastructure that grows with you, not against you. Learn from founders who've scaled from garage to global and the infrastructure decisions that made the difference.
+                </p>
+            </div>
+
+            <div class="infrastructure-grid">
+                <div class="infra-card infra-card--primary">
+                    <div class="infra-card__header">
+                        <div class="infra-card__icon">☁️</div>
+                        <h3 class="infra-card__title">Cloud-First Architecture</h3>
+                    </div>
+                    <div class="infra-card__content">
+                        <p class="infra-card__description">
+                            Start with cloud services that scale automatically. AWS, Google Cloud, and Azure offer startup credits and managed services that let you focus on product, not infrastructure management.
+                        </p>
+                        <div class="infra-card__recommendations">
+                            <h4 class="recommendations__title">Recommended Approach:</h4>
+                            <ul class="recommendations__list">
+                                <li>Begin with managed databases (RDS, Cloud SQL)</li>
+                                <li>Use serverless functions for background jobs</li>
+                                <li>Implement auto-scaling groups early</li>
+                                <li>Set up monitoring and alerting from day one</li>
+                            </ul>
+                        </div>
+                        <div class="infra-card__cost">
+                            <span class="cost__label">Typical Monthly Cost:</span>
+                            <span class="cost__value">$200-2K (scales with usage)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-card">
+                    <div class="infra-card__header">
+                        <div class="infra-card__icon">🔧</div>
+                        <h3 class="infra-card__title">DevOps & CI/CD</h3>
+                    </div>
+                    <div class="infra-card__content">
+                        <p class="infra-card__description">
+                            Automate your deployment pipeline from the beginning. Good DevOps practices prevent technical debt and enable your team to ship faster as you grow.
+                        </p>
+                        <div class="infra-card__tools">
+                            <span class="tool-tag">GitHub Actions</span>
+                            <span class="tool-tag">Docker</span>
+                            <span class="tool-tag">Kubernetes</span>
+                            <span class="tool-tag">Terraform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-card">
+                    <div class="infra-card__header">
+                        <div class="infra-card__icon">📊</div>
+                        <h3 class="infra-card__title">Data Infrastructure</h3>
+                    </div>
+                    <div class="infra-card__content">
+                        <p class="infra-card__description">
+                            Plan your data architecture for both operational and analytical needs. The decisions you make early will impact your ability to use data for growth.
+                        </p>
+                        <div class="infra-card__tools">
+                            <span class="tool-tag">PostgreSQL</span>
+                            <span class="tool-tag">Redis</span>
+                            <span class="tool-tag">BigQuery</span>
+                            <span class="tool-tag">Airflow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-card">
+                    <div class="infra-card__header">
+                        <div class="infra-card__icon">🔐</div>
+                        <h3 class="infra-card__title">Security Foundation</h3>
+                    </div>
+                    <div class="infra-card__content">
+                        <p class="infra-card__description">
+                            Security isn't optional for startups anymore. Implement security best practices early to protect your customers and avoid compliance headaches later.
+                        </p>
+                        <div class="infra-card__tools">
+                            <span class="tool-tag">OAuth 2.0</span>
+                            <span class="tool-tag">SSL/TLS</span>
+                            <span class="tool-tag">WAF</span>
+                            <span class="tool-tag">Audit Logs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-card">
+                    <div class="infra-card__header">
+                        <div class="infra-card__icon">📈</div>
+                        <h3 class="infra-card__title">Monitoring & Observability</h3>
+                    </div>
+                    <div class="infra-card__content">
+                        <p class="infra-card__description">
+                            You can't fix what you can't see. Implement comprehensive monitoring to catch issues before they impact customers and understand your system's behavior.
+                        </p>
+                        <div class="infra-card__tools">
+                            <span class="tool-tag">DataDog</span>
+                            <span class="tool-tag">Sentry</span>
+                            <span class="tool-tag">PagerDuty</span>
+                            <span class="tool-tag">Grafana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-card">
+                    <div class="infra-card__header">
+                        <div class="infra-card__icon">🌍</div>
+                        <h3 class="infra-card__title">Global Distribution</h3>
+                    </div>
+                    <div class="infra-card__content">
+                        <p class="infra-card__description">
+                            Plan for global reach from the start. CDNs, edge computing, and multi-region deployments ensure good performance for users worldwide.
+                        </p>
+                        <div class="infra-card__tools">
+                            <span class="tool-tag">CloudFlare</span>
+                            <span class="tool-tag">AWS CloudFront</span>
+                            <span class="tool-tag">Vercel Edge</span>
+                            <span class="tool-tag">Load Balancers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scaling Section -->
+    <section id="scaling" class="section section--gradient">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Technology Scaling Playbook</h2>
+                <p class="section__subtitle">
+                    The critical technology decisions and transitions every successful startup faces as they grow from 10 to 10,000 users and beyond.
+                </p>
+            </div>
+
+            <div class="scaling-timeline">
+                <div class="scale-phase">
+                    <div class="phase__header">
+                        <span class="phase__icon">🌱</span>
+                        <div class="phase__info">
+                            <h3 class="phase__title">0-1K Users</h3>
+                            <p class="phase__subtitle">Focus on Product-Market Fit</p>
+                        </div>
+                    </div>
+                    <div class="phase__content">
+                        <div class="phase__challenges">
+                            <h4 class="challenges__title">Key Challenges:</h4>
+                            <ul class="challenges__list">
+                                <li>Building MVP quickly with limited resources</li>
+                                <li>Iterating based on early user feedback</li>
+                                <li>Keeping costs minimal while testing assumptions</li>
+                                <li>Setting up basic analytics and user tracking</li>
+                            </ul>
+                        </div>
+                        <div class="phase__solutions">
+                            <h4 class="solutions__title">Technology Solutions:</h4>
+                            <div class="solution-tags">
+                                <span class="solution-tag">No-code/Low-code tools</span>
+                                <span class="solution-tag">Serverless architecture</span>
+                                <span class="solution-tag">Simple deployment (Vercel/Netlify)</span>
+                                <span class="solution-tag">Free tier cloud services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scale-phase">
+                    <div class="phase__header">
+                        <span class="phase__icon">🚀</span>
+                        <div class="phase__info">
+                            <h3 class="phase__title">1K-10K Users</h3>
+                            <p class="phase__subtitle">Optimize and Stabilize</p>
+                        </div>
+                    </div>
+                    <div class="phase__content">
+                        <div class="phase__challenges">
+                            <h4 class="challenges__title">Key Challenges:</h4>
+                            <ul class="challenges__list">
+                                <li>Performance optimization as usage grows</li>
+                                <li>Implementing proper error handling and monitoring</li>
+                                <li>Setting up customer support systems</li>
+                                <li>Building team processes and code quality standards</li>
+                            </ul>
+                        </div>
+                        <div class="phase__solutions">
+                            <h4 class="solutions__title">Technology Solutions:</h4>
+                            <div class="solution-tags">
+                                <span class="solution-tag">Database optimization</span>
+                                <span class="solution-tag">Caching layers (Redis)</span>
+                                <span class="solution-tag">Monitoring tools</span>
+                                <span class="solution-tag">CI/CD pipelines</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scale-phase">
+                    <div class="phase__header">
+                        <span class="phase__icon">📈</span>
+                        <div class="phase__info">
+                            <h3 class="phase__title">10K-100K Users</h3>
+                            <p class="phase__subtitle">Scale Infrastructure</p>
+                        </div>
+                    </div>
+                    <div class="phase__content">
+                        <div class="phase__challenges">
+                            <h4 class="challenges__title">Key Challenges:</h4>
+                            <ul class="challenges__list">
+                                <li>Horizontal scaling and load distribution</li>
+                                <li>Data management and analytics infrastructure</li>
+                                <li>Security compliance and data protection</li>
+                                <li>Team scaling and technical leadership</li>
+                            </ul>
+                        </div>
+                        <div class="phase__solutions">
+                            <h4 class="solutions__title">Technology Solutions:</h4>
+                            <div class="solution-tags">
+                                <span class="solution-tag">Microservices architecture</span>
+                                <span class="solution-tag">Container orchestration</span>
+                                <span class="solution-tag">Data warehousing</span>
+                                <span class="solution-tag">Security frameworks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scale-phase">
+                    <div class="phase__header">
+                        <span class="phase__icon">🏢</span>
+                        <div class="phase__info">
+                            <h3 class="phase__title">100K+ Users</h3>
+                            <p class="phase__subtitle">Enterprise-Grade Operations</p>
+                        </div>
+                    </div>
+                    <div class="phase__content">
+                        <div class="phase__challenges">
+                            <h4 class="challenges__title">Key Challenges:</h4>
+                            <ul class="challenges__list">
+                                <li>Multi-region deployment and disaster recovery</li>
+                                <li>Advanced analytics and machine learning</li>
+                                <li>Compliance with enterprise security standards</li>
+                                <li>Organizational scaling and technical governance</li>
+                            </ul>
+                        </div>
+                        <div class="phase__solutions">
+                            <h4 class="solutions__title">Technology Solutions:</h4>
+                            <div class="solution-tags">
+                                <span class="solution-tag">Global infrastructure</span>
+                                <span class="solution-tag">ML/AI platforms</span>
+                                <span class="solution-tag">Enterprise security</span>
+                                <span class="solution-tag">Technical governance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scaling-cta">
+                <h3 class="cta__title">Ready to Scale Your Technology?</h3>
+                <p class="cta__description">
+                    Every scaling challenge is unique. Get personalized guidance from technology leaders who've built and scaled infrastructure for companies from seed to IPO.
+                </p>
+                <div class="cta__buttons">
+                    <a href="https://www.grahammiranda.com" class="btn btn--white" target="_blank" rel="noopener">Get Strategic Guidance</a>
+                    <a href="https://tech.grahammiranda.com" class="btn btn--outline-white" target="_blank" rel="noopener">Technical Implementation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Founder Resources & Expert Network</h2>
+                <p class="section__subtitle">
+                    Additional resources, templates, and expert connections to help you make better technology decisions and avoid common pitfalls.
+                </p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-block">
+                    <div class="resource__header">
+                        <span class="resource__icon">📋</span>
+                        <h3 class="resource__title">Technology Assessment Templates</h3>
+                    </div>
+                    <div class="resource__content">
+                        <p class="resource__description">
+                            Downloadable frameworks and checklists to evaluate technology decisions, assess technical debt, and plan your infrastructure roadmap.
+                        </p>
+                        <ul class="resource__list">
+                            <li>Tech Stack Evaluation Matrix</li>
+                            <li>Security Compliance Checklist</li>
+                            <li>Scaling Readiness Assessment</li>
+                            <li>Vendor Selection Framework</li>
+                        </ul>
+                        <div class="resource__cta">
+                            <a href="#" class="resource__link">Download Templates</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-block">
+                    <div class="resource__header">
+                        <span class="resource__icon">🎯</span>
+                        <h3 class="resource__title">Startup Technology Playbooks</h3>
+                    </div>
+                    <div class="resource__content">
+                        <p class="resource__description">
+                            Detailed implementation guides for common startup technology scenarios, written by founders who've been through the journey.
+                        </p>
+                        <ul class="resource__list">
+                            <li>MVP Launch Checklist</li>
+                            <li>B2B SaaS Architecture Guide</li>
+                            <li>Mobile-First Development Strategy</li>
+                            <li>Data-Driven Product Playbook</li>
+                        </ul>
+                        <div class="resource__cta">
+                            <a href="#" class="resource__link">Browse Playbooks</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-block">
+                    <div class="resource__header">
+                        <span class="resource__icon">💬</span>
+                        <h3 class="resource__title">Founder Community Access</h3>
+                    </div>
+                    <div class="resource__content">
+                        <p class="resource__description">
+                            Join 2,500+ tech founders sharing experiences, asking questions, and helping each other navigate complex technology decisions.
+                        </p>
+                        <ul class="resource__list">
+                            <li>Weekly tech founder AMAs</li>
+                            <li>Stack-specific discussion groups</li>
+                            <li>Peer code reviews and feedback</li>
+                            <li>Startup showcase and networking</li>
+                        </ul>
+                        <div class="resource__cta">
+                            <a href="#" class="resource__link">Join Community</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-block">
+                    <div class="resource__header">
+                        <span class="resource__icon">🏆</span>
+                        <h3 class="resource__title">Expert Professional Network</h3>
+                    </div>
+                    <div class="resource__content">
+                        <p class="resource__description">
+                            When you need professional implementation, connect with vetted experts who understand startup constraints and have experience scaling technology.
+                        </p>
+                        <ul class="resource__list">
+                            <li><a href="https://www.grahammiranda.com" class="resource-link" target="_blank" rel="noopener">Strategic Technology Consulting</a></li>
+                            <li><a href="https://tech.grahammiranda.com" class="resource-link" target="_blank" rel="noopener">Technical Implementation & Architecture</a></li>
+                            <li><a href="https://nexplus.grahammiranda.network" class="resource-link" target="_blank" rel="noopener">Enterprise Infrastructure Solutions</a></li>
+                            <li><a href="https://www.grahammiranda.network" class="resource-link" target="_blank" rel="noopener">Network Optimization & Security</a></li>
+                        </ul>
+                        <div class="resource__cta">
+                            <a href="https://www.grahammiranda.com" class="resource__link" target="_blank" rel="noopener">Connect with Experts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__brand">
+                        <div class="logo">
+                            <span class="logo__icon">🚀</span>
+                            <span class="logo__text">FounderStack</span>
+                        </div>
+                        <p class="footer__tagline">Technology guidance for ambitious founders</p>
+                    </div>
+                    <p class="footer__description">
+                        Built by founders, for founders. We share the technology strategies, tools, and infrastructure decisions that help startups scale from idea to IPO.
+                    </p>
+                    <div class="footer__contact">
+                        <p>Questions about your technology strategy?</p>
+                        <p>Connect with our expert network for personalized guidance.</p>
+                    </div>
+                </div>
+
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Technology Guides</h4>
+                        <ul class="footer__list">
+                            <li><a href="#stack" class="footer__link">Tech Stack Selection</a></li>
+                            <li><a href="#tools" class="footer__link">SaaS Tools</a></li>
+                            <li><a href="#infrastructure" class="footer__link">Infrastructure Strategy</a></li>
+                            <li><a href="#scaling" class="footer__link">Scaling Playbook</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Resources</h4>
+                        <ul class="footer__list">
+                            <li><a href="/portfolio" class="footer__link">Assessment Templates</a></li>
+                            <li><a href="/tutorials" class="footer__link">Implementation Guides</a></li>
+                            <li><a href="/solutions" class="footer__link">Architecture Blueprints</a></li>
+                            <li><a href="/network" class="footer__link">Best Practices</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Expert Services</h4>
+                        <ul class="footer__list">
+                            <li><a href="https://www.grahammiranda.com" class="footer__link" target="_blank" rel="noopener">Technology Strategy</a></li>
+                            <li><a href="https://tech.grahammiranda.com" class="footer__link" target="_blank" rel="noopener">Technical Architecture</a></li>
+                            <li><a href="https://nexplus.grahammiranda.network" class="footer__link" target="_blank" rel="noopener">Enterprise Solutions</a></li>
+                            <li><a href="https://www.grahammiranda.network" class="footer__link" target="_blank" rel="noopener">Infrastructure Optimization</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Community</h4>
+                        <ul class="footer__list">
+                            <li><a href="#" class="footer__link">Founder Slack</a></li>
+                            <li><a href="#" class="footer__link">Weekly Newsletter</a></li>
+                            <li><a href="#" class="footer__link">Tech Founder AMAs</a></li>
+                            <li><a href="#" class="footer__link">Startup Showcase</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>&copy; 2025 FounderStack. Built with ❤️ by founders, for founders.</p>
+                </div>
+                <div class="footer__legal">
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                    <a href="#" class="footer__link">Terms of Service</a>
+                    <a href="#" class="footer__link">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
